@@ -20,5 +20,23 @@ body {
   background-color: #f8f9fa;
 }
 
+.custom-btn {
+  background-color: rgb(64, 113, 122);
+  border-color: rgb(64, 113, 122);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
 
+.custom-btn:hover {
+  background-color: #5c9ba9;
+  color: white;
+}
 
+.custom-btn:active,
+.custom-btn:focus {
+  
+  color: white; 
+  
+  background-color: rgb(64, 113, 122);
+  outline: none;
+}

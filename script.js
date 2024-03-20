@@ -77,9 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var passwordText = document.querySelector('#password');
         passwordText.value = password;
 
-        copyPasswordBtn.addEventListener('click', function () {
-            copyToClipboard(password);
-        });
+        if (!copyPasswordBtn._listenerAdded) {
+            copyPasswordBtn.addEventListener('click', function () {
+                copyToClipboard(password);
+            });
+            copyPasswordBtn._listenerAdded = true;
+        }
     }
 
     function copyToClipboard(text) {
