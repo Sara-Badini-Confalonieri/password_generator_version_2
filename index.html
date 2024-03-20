@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container ml-20">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center">Password Generator</h2>
+          </div>
+          <div class="card-body">
+            <form id="passwordForm">
+              <div class="form-group">
+                <label for="passwordLength">Length of Password (8 - 128 characters):</label>
+                <input type="number" class="form-control" id="passwordLength" min="8" max="128" required>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="lowercaseCheckbox">
+                <label class="form-check-label" for="lowercaseCheckbox">Include Lowercase Characters</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="uppercaseCheckbox">
+                <label class="form-check-label" for="uppercaseCheckbox">Include Uppercase Characters</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="numericCheckbox">
+                <label class="form-check-label" for="numericCheckbox">Include Numeric Characters</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="symbolsCheckbox">
+                <label class="form-check-label" for="symbolsCheckbox">Include Special Characters</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Generate Password</button>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="input-group">
+              <textarea id="password" class="form-control" rows="3" readonly
+                placeholder="Your generated password will appear here"></textarea>
+              <div class="input-group-append">
+                <button id="copyPasswordBtn" class="btn btn-primary" type="button">Copy Password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

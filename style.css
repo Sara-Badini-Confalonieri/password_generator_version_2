@@ -1,0 +1,24 @@
+:root {
+  --light-gray: #f8f9fa;
+  --dark-gray: #343a40; 
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('images/letters_background.jpg'); 
+  background-size: cover;
+}
+
+
+.card-header {
+  background-color: rgb(64, 113, 122);
+  color: #fff;
+}
+
+.card-body,
+.card-footer {
+  background-color: #f8f9fa;
+}
+
+
+
